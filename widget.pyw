@@ -27,8 +27,7 @@ class App():
         if battery.power_plugged:
             plug = "•"
 
-        now = '{}   {}% {}'.format(time.strftime(
-            "%H:%M   %d %b"), battery.percent, plug)
+        now = '{}   {}% {}'.format(time.strftime("%H:%M   %d %b"), battery.percent, plug)
         self.label.configure(text=now, font='-family roboto -size 8', fg = 'white', background = 'black')
         self.root.after(1000, self.update)
 
